@@ -10,10 +10,15 @@
         <mate name="keywords" content="computer"></mate>
         <base href="http://127.0.0.1:5500">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/jstest.js"></script>
+        <script type="text/javascript" defer src="js/js_popup.js"></script>
+        <script type="text/javascript" defer src="js/search_js.js"></script>
+
     </haed>
     
 
-    <body style="background-color: rgb(255, 255, 255);">
+    <!-- <body style="background-color: rgb(255, 255, 255);"> -->
+    <body style="background-color: black;" onload="pop_up();">
         <div classs="container-fluid" style="display: flex; justify-content: center;">
             <img src="image/logo_steam.svg" width="200" height="60">
             <!-- <h3 style="font-size: 24px; font-weight: bold; font-style: itakic; color: white; font-family: '굴림';"><a href='https://store.steampowered.com/?l=koreana' target="_blank">상점</a>    신규 및 특집    카테고리    포인트상점  뉴스    실험실</h3> -->
@@ -50,10 +55,19 @@
                         <a class="nav-link disabled" aria-disabled="true">더 많은정보</a>
                       </li>
                     </ul>
-                    <form class="d-flex" role="search">
+
+
+                    <!-- <form class="d-flex" role="search"> 
                       <input class="form-control me-2" type="search" placeholder="입력하세요" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">검색</button>
-                    </form>
+                      <button class="btn btn-outline-success" id="search_btn" type="submit">검색</button>
+                    </form>  -->
+
+                    <form class="d-flex" role="search" onsubmit="return googleSearch();">
+                      <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
+                      <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
+                      </form>
+
+
                   </div>
                 </div>
               </nav>
