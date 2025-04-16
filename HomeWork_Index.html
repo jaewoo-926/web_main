@@ -16,6 +16,8 @@
                 color:white; 
             }
         </style>
+        <script type="text/javascript" src="HomeWork_js/Basic_js_test.js"></script>  <!-- 자바 스크립트 불러오기-->
+        <script type="text/javascript" defer src="HomeWork_js/HomeWork_js_search.js"></script>
     </head>
     <body style="background-color: beige;">   <!-- 바디 시작 시작, background-color : 배경 화면 색 지정 -->
          <!-- <div style="display: flex; justify-content: center" > //구역 설정, 가로로 나열, 중앙에 정렬 
@@ -26,7 +28,14 @@
         </div> -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark"> <!-- 네비게이션 바 시작-->
             <div class="container-fluid">
-              <a class="navbar-brand" href="HomeWork_Index.html"><img src="HomeWork_Image/Pokemon_logo.png" width="100" height="100"></a>
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="HomeWork_Index.html">
+                        <img src="HomeWork_Image/Pokemon_logo.png"alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+                      </a>
+                    </div>
+                  </nav>
+              <a class="navbar-brand" href="HomeWork_Index.html">홈페이지</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -52,26 +61,26 @@
                       고객지원
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">회사센터</a></li>
-                      <li><a class="dropdown-item" href="#"></a> 고객지원</li>
+                      <li><a class="dropdown-item" href="https://pokemonkorea.co.kr/company">회사센터</a></li>
+                      <li><a class="dropdown-item" href="https://pokemonkorea.co.kr/faq"></a> 고객지원</li>
                       <li><hr class="dropdown-divider"> 1:1문의</li>
                       <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <input class="form-control me-2" type="search" placeholder="입력" aria-label="Search">
+                  <button class="btn btn-outline-success" id="search_button_msg " type="submit">검색하기</button>
                 </form>
               </div>
             </div>
           </nav> <!-- 네비게이션 바 끝-->
         <div style="display: flex; justify-content: center;">
             <a href="https://pokemonkorea.co.kr/pokemon_champions" target="_blank">
-                <img src="HomeWork_Image/Pokemon_Main.png" width="1800" height="768"> <!-- 메인 창 사진 삽입--> 
+                <img src="HomeWork_Image/Pokemon_Main.png" width="1800" height="768" class="img-fluid"> <!-- 메인 창 사진 삽입--> 
             </a>
         </div>
-        <div style="display: flex; justify-content: center;">
+        <!-- <div style="display: flex; justify-content: center;">
              <table border="1"> 
                 
                 <tbody>
@@ -99,7 +108,7 @@
 
                 </tbody>
             </table> 
-        </div>
+        </div> -->
         <div style="display: flex; justify-content: center;">
             <table class="table">
                 <thead>
