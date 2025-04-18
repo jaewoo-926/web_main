@@ -1,10 +1,11 @@
 document.getElementById("search_button_msg ").addEventListener('click', search_message);
-function search_message(){
-    let message = "검색을 수행합니다!";
-    alert(message);
-  }
+const search_message = () => {
+  const c = '검색을 수행합니다';
+  alert(c);
+  };
+  
  function googleSearch() {
-    const badWords = ['바보', '멍청이', 'ㅅㅂ', 'ㅄ', '꺼져'];         // 검사할 비속어 리스트 (5개)
+    const badWords = ['바보', '멍청이', '똥개', '땅딸보', '대가리'];         // 검사할 비속어 리스트 (5개)
     const searchTerm = document.getElementById("search_input").value; // 검색어로 설정
     
     if (searchTerm.length > 0) {  // 검색어가 0보다 크면 실행
