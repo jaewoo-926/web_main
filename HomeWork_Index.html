@@ -17,21 +17,23 @@
             }
         </style>
         <script type="text/javascript" src="HomeWork_js/Basic_js_test.js"></script>  <!-- 자바 스크립트 불러오기-->
-        <script type="text/javascript" defer src="HomeWork_js/HomeWork_js_search.js"></script>
+        <script type="text/javascript" defer src="HomeWork_js/HomeWork_js_search.js"></script> <!-- 자바 스크립트 불러오기-->
+        <script type="text/javascript" defer src="HomeWork_js/HomeWork_Popup.js"></script>
     </head>
-    <body style="background-color: beige;">   <!-- 바디 시작 시작, background-color : 배경 화면 색 지정 -->
+    <body style="background-color: beige;"  onload="pop_up();">   <!-- 바디 시작 시작, background-color : 배경 화면 색 지정 -->
          <!-- <div style="display: flex; justify-content: center" > //구역 설정, 가로로 나열, 중앙에 정렬 
             <a href="Index.html" target="_blank">  // tatget= 의 _blank:새창, _self:현재창, _parent:이전부모창, _top:현재 윈도우 전체
                 <img src="HomeWork_Image/Pokemon_logo.png" width="100" height="100"> // <img>태그로 이미지 삽입, 가로 세로 크기 조정
             </a> 
             <h3 style="font-style: 24px; font-weight: bold; font-style: italic; color:rgb(77, 77, 77); font-family: '굴림'" > 게임   상품    포켓몬  이벤트  새소식 </h3> // 헤드라인 문자 <h1> ~ <h6> 까지 다양 
         </div> -->
+        
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark"> <!-- 네비게이션 바 시작-->
             <div class="container-fluid">
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="HomeWork_Index.html">
-                        <img src="HomeWork_Image/Pokemon_logo.png"alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+                        <img src="HomeWork_Image/Pokemon_logo.png"alt="Logo" width="100" height="100" onmouseover="over(this)" onmouseout="out(this)" class="d-inline-block align-text-top" >
                       </a>
                     </div>
                   </nav>
@@ -68,9 +70,9 @@
                     </ul>
                   </li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="입력" aria-label="Search">
-                  <button class="btn btn-outline-success" id="search_button_msg " type="submit">검색하기</button>
+                <form class="d-flex" role="search" onsubmit="return googleSearch();">
+                    <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
+                    <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
                 </form>
               </div>
             </div>
