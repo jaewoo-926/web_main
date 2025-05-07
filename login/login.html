@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/login.css">
     <script type="text/javascript" src="js/js_login.js" defer></script>
+    <script type="text/javascript" src="js/session.js" defer></script>
 </haed>
-<body>
+<body class="text-center" onload="init();">
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -32,6 +33,12 @@
                 </div>
   
                 <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">비밀번호를 잊어버리셨습니까?</a></p>
+
+                <div class="checkbox mb-3">
+                  <label>
+                  <input type="checkbox" value="remember-me" id="idSaveCheck"> 아이디 기억
+                  </label>
+                </div>
   
                 <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" id="login_btn" type="button">로그인</button> 
                 <!-- submit은 다음으로 무조건 넘어감 -->
