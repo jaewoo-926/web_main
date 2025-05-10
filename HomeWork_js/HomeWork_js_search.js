@@ -1,4 +1,4 @@
-document.getElementById("search_button_msg ").addEventListener('click', search_message);
+document.getElementById("search_button_msg").addEventListener('click', search_message);
 const search_message = () => {
   const c = '검색을 수행합니다';
   alert(c);
