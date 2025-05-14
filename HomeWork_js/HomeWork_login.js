@@ -1,5 +1,5 @@
-// 전역 변수 추가, 맨 위 위치
-const idsave_check = document.getElementById('idSaveCheck');
+
+
 
 const check_xss = (input) => {
     // DOMPurify 라이브러리 로드 (CDN 사용)
@@ -36,19 +36,26 @@ function getCookie(name) {
     return null; // 못 찾으면 null 반환
 }
 
-    function init(){ // 로그인 폼에 쿠키에서 가져온 아이디 입력
-        const emailInput = document.getElementById('typeEmailX');
-        const idsave_check = document.getElementById('idSaveCheck');
-        let get_id = getCookie("id");
-        if(get_id) {
-        emailInput.value = get_id;
-        idsave_check.checked = true;
-        }
-        session_check(); // 세션 유무 검사
-        checkLoginStatus();
-        }
-        
-
+function init(){ // 로그인 폼에 쿠키에서 가져온 아이디 입력
+    const emailInput = document.getElementById('typeEmailX');
+    const idsave_check = document.getElementById('idSaveCheck');
+    let get_id = getCookie("id");
+    if(get_id) {
+    emailInput.value = get_id;
+    idsave_check.checked = true;
+    }
+    session_check(); // 세션 유무 검사
+    checkLoginStatus();
+}
+     
+function init_logined(){
+    if(sessionStorage){
+    decrypt_text(); // 복호화 함수
+    }
+    else{
+    alert("세션 스토리지 지원 x");
+    }
+}
 
 const check_input = () => {
     const loginForm = document.getElementById('login_form');
@@ -64,6 +71,14 @@ const check_input = () => {
     // check_xss 함수로 비밀번호 Sanitize
     const sanitizedEmail = check_xss(emailValue);
     // check_xss 함수로 비밀번호 Sanitize
+    const idsave_check = document.getElementById('idSaveCheck');
+    const payload = {
+    id: emailValue,
+    exp: Math.floor(Date.now() / 1000) + 3600 // 1시간 (3600초)
+    };
+    const jwtToken = generateJWT(payload);
+
+
     if (!sanitizedEmail) {
         // Sanitize된 비밀번호 사용
         return false;
@@ -146,6 +161,7 @@ const check_input = () => {
     }
     console.log('이메일:', emailValue);
     console.log('비밀번호:', passwordValue);
+    localStorage.setItem('jwt_token', jwtToken);
 
     if(idsave_check.checked == true) { // 아이디 체크 o
         alert("쿠키를 저장합니다.", emailValue);
