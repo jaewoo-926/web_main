@@ -77,4 +77,3 @@ function close_window() { // 함수 정의
 window.close(); // 윈도우 닫기
 } */    
     
-        
