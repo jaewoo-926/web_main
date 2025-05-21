@@ -15,7 +15,8 @@ session_check(); // 세션 유무 검사
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-init();
+    checkAuth();
+    init_logined();
 });
 
 
