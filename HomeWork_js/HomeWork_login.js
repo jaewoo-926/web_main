@@ -171,8 +171,12 @@ const check_input = () => {
         else{ // 아이디 체크 x
         setCookie("id", emailValue.value, 0); //날짜를 0 - 쿠키 삭제
         }
-    session_set(); // 세션 생성
-    loginForm.submit();
+    encryptAESGCM(passwordValue, passwordValue).then((encrypted) => {
+        sessionStorage.setItem("Session_Storage_pass2", encrypted);
+        console.log("Session_Storage_pass2 저장 완료:", encrypted);
+        session_set(); // 세션 생성
+        loginForm.submit();
+    });
     };
     
 //10주차 로그인 / 로그아웃 횟수 쿠키
