@@ -1,4 +1,4 @@
-import { session_set, session_get, session_check, session_get2 } from './HomeWork_session.js';
+import { session_set, session_get, session_check } from './HomeWork_session.js';
 import { encrypt_text, decrypt_text } from './HomeWork_crypto.js';
 import { generateJWT, checkAuth } from './HomeWork_jwt_token.js';
 
@@ -52,7 +52,8 @@ function init(){ // 로그인 폼에 쿠키에서 가져온 아이디 입력
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-init();
+checkAuth();
+init_logined();
 });
 
      
@@ -198,6 +199,13 @@ function login_count() {
     // alert("로그인 횟수: " + count);
 }
 
+// 로그아웃 횟수 증가 함수
+function logout_count() {
+    let count = parseInt(getCookie("logout_cnt")) || 0;
+    count += 1;
+    setCookie("logout_cnt", count, 1); // 1일간 저장
+    // alert("로그아웃 횟수: " + count);
+}
 
 function login_failed() {
     let failCount = parseInt(getCookie("login_fail_cnt")) || 0;
@@ -226,7 +234,6 @@ function checkLoginStatus() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    session_get2();
   const loginBtn = document.getElementById("login_btn");
   if (loginBtn) {
     loginBtn.addEventListener('click', check_input);
