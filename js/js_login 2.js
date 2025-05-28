@@ -3,30 +3,30 @@ import { encrypt_text, decrypt_text } from './crypto.js';
 import { generateJWT, checkAuth } from './jwt_token.js';
 
 function init(){ // 로그인 폼에 쿠키에서 가져온 아이디 입력
-const emailInput = document.getElementById('typeEmailX');
-const idsave_check = document.getElementById('idSaveCheck');
+    const emailInput = document.getElementById('typeEmailX');
+    const idsave_check = document.getElementById('idSaveCheck');
 
-let get_id = getCookie("id");
-if(get_id) {
-emailInput.value = get_id;
-idsave_check.checked = true;
-}
-session_check(); // 세션 유무 검사
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    checkAuth();
-    init_logined();
-});
-
-
-function init_logined(){
-    if(sessionStorage){
-        decrypt_text(); // 복호화 함수
+    let get_id = getCookie("id");
+    if(get_id) {
+        emailInput.value = get_id;
+        idsave_check.checked = true;
     }
-    else{
-        alert("세션 스토리지 지원 x");
+    session_check(); // 세션 유무 검사
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        checkAuth();
+        init_logined();
+    });
+
+
+    function init_logined(){
+        if(sessionStorage){
+            decrypt_text(); // 복호화 함수
+        }
+        else{
+            alert("세션 스토리지 지원 x");
+        }
 }
 
 const check_xss = (input) => {
