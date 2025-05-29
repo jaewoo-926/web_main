@@ -7,7 +7,7 @@ b = 5;
 여러줄 주석 처리
 */
 
-if(true){
+if (true) {
     let C = 'let 접근';
     var c_1 = 'var 접근';
 }
