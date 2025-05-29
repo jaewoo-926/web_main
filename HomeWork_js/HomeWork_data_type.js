@@ -33,12 +33,12 @@ users.set("user2", {
 for (const [username, user] of users) {
     console.log(`사용자 이름: ${username}`, `ID: ${user.id}`);
     console.log(`비밀번호: ${user.password}`);
-    }
+}
 // Set 객체 활용 (예), 이름만 저장할 Set 객체 생성
 const usernames = new Set();
-    usernames.add("user1"); // 사용자 이름 추가
-    usernames.add("user2");
-    // Set 객체의 모든 사용자 이름 반복 출력
-    for (const username of usernames) {
-        console.log(`사용자 이름: ${username}`);
+usernames.add("user1"); // 사용자 이름 추가
+usernames.add("user2");
+// Set 객체의 모든 사용자 이름 반복 출력
+for (const username of usernames) {
+    console.log(`사용자 이름: ${username}`);
 }
