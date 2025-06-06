@@ -1,10 +1,10 @@
 # 20221023 정재우 수 4-6 자바웹프로그래밍 
 # HTML 프로젝트 - 깃허브
 새로운 시작! 웹 서비스 개발의 세계로 떠나보아요~
-## 수업 병행 메인 프로젝트
-- [프로젝트 메인 주소](https://github.com/jaewoo-926/web_main/blob/main/Index.html)
-## 연습문제 및 자습 용도 프로젝트
-- [연습문제 및 자습 용도 프로젝트](https://github.com/jaewoo-926/web_main/blob/main/HomeWork_Index.html)
+## 수업 병행 프로젝트
+- [프로젝트 주소](https://github.com/jaewoo-926/web_main/blob/main/Index.html)
+## 연습문제 및 자습 용도 메인 프로젝트
+- [연습문제 및 자습 용도 메인 프로젝트](https://github.com/jaewoo-926/web_main/blob/main/HomeWork_Index.html)
 ## 수업 병행 메인 프로젝트 업데이트
  1. 2주차 수업 메인화면 개발 완료! (문제 포함)
  2. 3주차 수업 부트스트랩 적용 완료! (문제 제외)
