@@ -7,7 +7,6 @@
   <title> Pokemon 메인 화면</title> <!--  <title> : 창 화면 이름 -->
   <meta name="author" content="20221023"> <!-- 저자 정보 정보 표현-->
   <meta name="keywords" content="computer"> <!-- 키워드 정보 표현-->
-  <base href="http://127.0.0.1:5500"> <!-- 기본주소 정보 표현-->
   <meta name="viewport"><!-- 부트 스트랩-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -24,11 +23,11 @@
     }
   </style>
   <!-- <script type="text/javascript" src="/HomeWork_js/Basic_js_test.js"></script>  자바 스크립트 불러오기 -->
-  <script type="text/javascript" defer src="/HomeWork_js/HomeWork_js_search.js"></script> <!-- 자바 스크립트 불러오기-->
-  <script type="text/javascript" defer src="/HomeWork_js/HomeWork_Popup_login.js"></script>
-  <script type="text/javascript" defer src="/HomeWork_js/HomeWork_crypto2.js"></script>
-  <script type="module" defer src="/HomeWork_js/HomeWork_login2.js"></script>
-  <script type="module" defer src="/HomeWork_js/HomeWork_map.js"></script>
+  <script type="text/javascript" defer src="../HomeWork_js/HomeWork_js_search.js"></script> <!-- 자바 스크립트 불러오기-->
+  <script type="text/javascript" defer src="../HomeWork_js/HomeWork_Popup_login.js"></script>
+  <script type="text/javascript" defer src="../HomeWork_js/HomeWork_crypto2.js"></script>
+  <script type="module" defer src="../HomeWork_js/HomeWork_login2.js"></script>
+  <script type="module" defer src="../HomeWork_js/HomeWork_map.js"></script>
   <script type="text/javascript"
     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=43b2c3db535f6683f23e3ddd970b2ebb&libraries=services,clusterer,drawing"></script>
 </head>
@@ -39,7 +38,7 @@
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="HomeWork_Index.html">
-            <img src="HomeWork_Image/Pokemon_logo.png" alt="Logo" width="100" height="100" onmouseover="over(this)"
+            <img src="./HomeWork_Image/Pokemon_logo.png" alt="Logo" width="100" height="100" onmouseover="over(this)"
               onmouseout="out(this)" class="d-inline-block align-text-top">
           </a>
         </div>
@@ -111,7 +110,7 @@
           <div class="col-lg-4">
             <div class="card mb-4">
               <div class="card-body text-center">
-                <img src="/HomeWork_Image/pokemon_player.png" alt="avatar" class="rounded-circle img-fluid"
+                <img src="./HomeWork_Image/pokemon_player.png" alt="avatar" class="rounded-circle img-fluid"
                   style="width: 150px;">
                 <h5 class="my-3">심 향</h5>
                 <p class="text-muted mb-1">포켓몬 트레이너</p>
@@ -296,7 +295,7 @@
     <table class="table">
       <thead>
         <tr class="table-secondary">
-          <td colspan="3">게임 타이틀<img src="HomeWork_Image/pokemon_game_logo.png" width="100" height="50"></td>
+          <td colspan="3">게임 타이틀<img src="./HomeWork_Image/pokemon_game_logo.png" width="100" height="50"></td>
         </tr>
       </thead>
       <tbody>
