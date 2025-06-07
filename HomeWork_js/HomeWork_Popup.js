@@ -22,11 +22,11 @@ function show_clock() {
     setTimeout(show_clock, 1000); //1초마다 갱신
 }
 const over = (obj) => {
-    obj.src = "./HomeWork_Image/Pokemon_logoRotate.png";
+    obj.src = "../HomeWork_Image/Pokemon_logoRotate.png";
 };
 
 function out(obj) {
-    obj.src = "./HomeWork_Image/Pokemon_logo.png";
+    obj.src = "../HomeWork_Image/Pokemon_logo.png";
 }
 function pop_up() {
     var cookieCheck = getCookie("popupYN");
