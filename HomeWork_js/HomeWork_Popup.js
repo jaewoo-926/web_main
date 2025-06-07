@@ -1,5 +1,5 @@
 function pop_up() {
-    window.open("../Homework_Popup/Homework_popup.html", "팝업테스트", "width=400, height=300, top=10, left=10");
+    window.open("./Homework_Popup/Homework_popup.html", "팝업테스트", "width=400, height=300, top=10, left=10");
 }
 function show_clock() {
     let currentDate = new Date(); // 현재 시스템 날짜 객체 생성
@@ -22,11 +22,11 @@ function show_clock() {
     setTimeout(show_clock, 1000); //1초마다 갱신
 }
 const over = (obj) => {
-    obj.src = "../HomeWork_Image/Pokemon_logoRotate.png";
+    obj.src = "./HomeWork_Image/Pokemon_logoRotate.png";
 };
 
 function out(obj) {
-    obj.src = "../HomeWork_Image/Pokemon_logo.png";
+    obj.src = "./HomeWork_Image/Pokemon_logo.png";
 }
 function pop_up() {
     var cookieCheck = getCookie("popupYN");
