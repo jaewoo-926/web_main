@@ -5,6 +5,7 @@
 - [프로젝트 주소](https://github.com/jaewoo-926/web_main/blob/main/Index.html)
 ## 연습문제 및 자습 용도 메인 프로젝트
 - [연습문제 및 자습 용도 메인 프로젝트](https://github.com/jaewoo-926/web_main/blob/main/HomeWork_Index.html)
+- [메인 프로젝트 홈페이지](https://jaewoo-926.github.io/web_main_20221023/HomeWork_Index.html)
 ## 수업 병행 메인 프로젝트 업데이트
  1. 2주차 수업 메인화면 개발 완료! (문제 포함)
  2. 3주차 수업 부트스트랩 적용 완료! (문제 제외)
