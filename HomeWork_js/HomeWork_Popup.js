@@ -1,5 +1,5 @@
 function pop_up() {
-    window.open("HomeWork_Popup/HomeWork_popup.html", "팝업테스트", "width=400, height=300, top=10, left=10");
+    window.open("/web_main_20221023/HomeWork_Popup/HomeWork_popup.html", "팝업테스트", "width=400, height=300, top=10, left=10");
 }
 function show_clock() {
     let currentDate = new Date(); // 현재 시스템 날짜 객체 생성
